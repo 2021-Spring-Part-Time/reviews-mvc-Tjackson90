@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${review.reviewTitle}">WWCI Ultima Game Reviews</title>
+    <link rel="stylesheet" type="text/css" href="layout.css"/>
+</head>
+<body>
+
+<header>
+    <h1 th:text="${review.reviewTitle}">Console Review</h1>
+</header>
+
+<main>
+    <h2 th:text="${review.reviewTitle}"></h2>
+    <img th:src="${review.imageUrl}" alt="Picture Console"/>
+    <p th:text="${review.reviewContent}"></p>
+    <a href="/reviews">Go Back</a>
+</main>
+
+<footer>
+    <small>&copyright of wcci-pt 2021</small>
+</footer>
+
+</body>
+</html>

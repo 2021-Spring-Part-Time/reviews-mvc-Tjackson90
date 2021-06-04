@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WCCI Review Page</title>
+    <link rel="stylesheet" type="text/css" href="layout.css"/>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="headline">
+            <h1>WWCI Ultima Game Reviews</h1>
+            
+        </div>
+    </header>
+
+    <main>
+        <ul>
+            <img src="images/Console VS PC argument meme.jpg" alt="Pic of meme"/>
+            <li th:each="review: ${reviewsModel}"
+            ><a th:href="@{/review(id=${review.id})}"
+                th:text="${review.reviewTitle}"></a>
+            
+            </li>
+
+        </ul>
+    </main>
+
+    <footer>
+        <small>&copyright of wcci-pt 2021</small>
+    </footer>
+</div>
+</body>
+</html>

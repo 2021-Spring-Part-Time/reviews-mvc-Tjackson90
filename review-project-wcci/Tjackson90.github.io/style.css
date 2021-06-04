@@ -1,0 +1,79 @@
+.landingPage_container {
+background-color: #ddd;
+border-radius: 8px;
+margin: auto;
+padding: 20px;
+width: 80%;
+}
+
+header {
+    display: flex; 
+    align-items: center; /*y axis when flex-direction:  is ro */
+    justify-content: space-between; /*x axis when flex-direction:  is ro */
+    padding: 20px;
+}
+
+nav button {
+    background-color: black;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px;
+}
+
+nav button:hover {
+    background-color: #888;
+    transition: 0.5s;
+}
+
+.sectionImg {
+   border-radius: 8px;
+   box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);
+   -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);
+   -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);; 
+   height: auto;
+    margin-top: 10px;
+    width: 75%;
+}
+
+main {
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: repeat(3, 1fr); /*same as 1fr 1fr 1fr*/
+    gap: 10px;
+    text-align: center;
+}
+
+section {
+    background-color: #888;
+}
+
+.landingPage_section_one {
+    grid-row: 1/4; /*will span 3 rows*/
+}
+
+.landingPage_section_two {
+    grid-row: 1/2
+}
+
+.landingPage_section_three {
+    grid-row: 1/2
+}
+
+.landingPage_section_four {
+    grid-column: 2/4;
+    grid-row: 2/4;
+}
+
+@media only screen and (max-width: 767px){
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+}
